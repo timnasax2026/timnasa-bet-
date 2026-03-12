@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportyJET | Win Big</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="auth-container">
+        <div class="auth-card">
+            <h1 style="color: #e74c3c;">SportyJET</h1>
+            <input type="text" id="user-input" placeholder="Jina la Mtumiaji">
+            <input type="password" id="pass-input" placeholder="Neno la Siri">
+            <button onclick="authenticate('login')">INGIA (LOGIN)</button>
+            <button onclick="authenticate('register')" style="background: #333;">JISAJILI</button>
+            <p id="auth-status"></p>
+        </div>
+    </div>
+
+    <div id="game-ui" style="display: none;">
+        <div class="header">
+            <span>👤 <b id="display-name"></b></span>
+            <span>💰 <b id="display-balance"></b> TZS</span>
+        </div>
+        
+        <div id="history-bar"></div>
+
+        <div class="game-board">
+            <div id="multiplier-text">1.00x</div>
+            <div id="plane-anim">✈️</div>
+        </div>
+
+        <div class="bet-controls">
+            <input type="number" id="bet-amount" value="1000">
+            <input type="number" id="auto-cash-input" placeholder="Auto Cashout (mfano 2.0)">
+            <div class="btn-group">
+                <button id="bet-btn" onclick="startRound()">BET</button>
+                <button id="cashout-btn" onclick="triggerCashout()" disabled>CASHOUT</button>
+            </div>
+        </div>
+
+        <div class="chat-section">
+            <div id="chat-msgs"></div>
+            <div class="chat-input-row">
+                <input type="text" id="msg-input" placeholder="Andika hapa...">
+                <button onclick="sendChatMessage()">TUMA</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
