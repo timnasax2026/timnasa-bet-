@@ -1,0 +1,19 @@
+body { margin: 0; background: #000; color: white; font-family: 'Segoe UI', sans-serif; }
+#auth-container { height: 100vh; display: flex; align-items: center; justify-content: center; }
+.auth-card { background: #1a1a1a; padding: 30px; border-radius: 15px; text-align: center; width: 300px; }
+input { width: 100%; padding: 12px; margin: 10px 0; border-radius: 5px; border: none; box-sizing: border-box; }
+button { width: 100%; padding: 12px; background: #e74c3c; color: white; border: none; font-weight: bold; cursor: pointer; border-radius: 5px; }
+
+.header { display: flex; justify-content: space-between; padding: 15px; background: #111; border-bottom: 1px solid #333; }
+#history-bar { padding: 10px; background: #050505; display: flex; gap: 10px; overflow-x: auto; min-height: 20px; }
+.game-board { height: 300px; position: relative; background: radial-gradient(circle, #222, #000); overflow: hidden; }
+#multiplier-text { font-size: 4rem; font-weight: bold; padding-top: 80px; text-align: center; }
+#plane-anim { position: absolute; bottom: 20px; left: 10%; font-size: 30px; transition: transform 0.1s linear; }
+
+.bet-controls { padding: 20px; border-top: 1px solid #333; }
+.btn-group { display: flex; gap: 10px; margin-top: 10px; }
+#cashout-btn { background: #f1c40f; color: black; }
+
+.chat-section { background: #0a0a0a; height: 150px; display: flex; flex-direction: column; }
+#chat-msgs { flex: 1; overflow-y: auto; padding: 10px; text-align: left; font-size: 13px; }
+.chat-input-row { display: flex; }
